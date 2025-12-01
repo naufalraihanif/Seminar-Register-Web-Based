@@ -2,15 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repository') {
+        stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/naufalraihanif/Seminar-Register-Web-Based.git'
             }
         }
 
-        stage('Run PHP') {
+        stage('Install Dependencies') {
             steps {
-                powershell 'php index.php'
+                bat 'composer install'
+            }
+        }
+
+        stage('Run Unit Tests') {
+            steps {
+                bat 'vendor\\bin\\phpunit --testdox'
             }
         }
     }
