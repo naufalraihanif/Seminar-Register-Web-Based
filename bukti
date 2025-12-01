@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,4 +44,51 @@
         ?>
     </div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Registration Proof</title>
+    <style>
+        .container {
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Proof of Registration</h2>
+
+        <?php
+        // Simulating a file path based on user info
+        $userId = 1; // Example user ID
+        $filePath = "proofs/registration_card_user_" . $userId . ".pdf"; // Path to the proof of registration card
+
+        if (file_exists($filePath)) {
+            echo '<a href="' . $filePath . '" download class="button">Download Registration Card</a>';
+        } else {
+            echo '<p>Registration card not available.</p>';
+        }
+        ?>
+    </div>
+</body>
+>>>>>>> c955c63b079a10a03716ec1400ec2b05d723a650
 </html>
