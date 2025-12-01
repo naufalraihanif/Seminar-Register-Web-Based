@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/username/repo-php-saya.git'
+                git branch: 'main', url: 'https://github.com/naufalraihanif/Seminar-Register-Web-Based.git'
             }
         }
 
